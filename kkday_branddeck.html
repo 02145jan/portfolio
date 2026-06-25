@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKday Brand Deck</title>
+
+    <script src="https://kit.fontawesome.com/b5c8d6b5d7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.typekit.net/jel2gvk.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+    <style>
+
+    :root {
+      --display-font : "presicav", sans-serif;
+      --h1-text-style : bold 36px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+      --h4-text-style : 400 16px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+      --main-font-size: 400 12px "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+      --grey-color: #aaa;
+      --orange-color: #FC5E20;
+    }
+
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #1c1c1c;
+      font: var(--main-font-size);
+      overflow-x: hidden;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1 { 
+      font: bold 36px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif; 
+    }
+
+    h2 {
+      font: 500 24px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+    }
+    
+    h3 {
+      font: 500 20px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+    } 
+
+    h4 {
+      font: 400 16px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+    }
+
+    [data-target] {
+      cursor: pointer;
+    }
+
+    .wrapper {
+      width: min(1400px, calc(100% - 48px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 80px;
+      padding: 8rem 0;
+      position: relative;
+    }
+
+    .sidebar {
+        position: sticky;
+        width: 100%;
+        top: 40px;
+        height: fit-content;
+    }
+
+    .page-category {
+        color: var(--orange-color);
+        margin-bottom: 1.6rem;
+    }
+
+    .sidebar-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+        font: var(--main-font-size);
+    }
+
+    .sidebar-menu li a {
+    font: inherit; 
+    color: var(--grey-color);
+    transition: color 300ms ease, font 300ms ease;
+    }
+
+    .sidebar-menu li a.active {
+    font: var(--h4-text-style);
+    color: #1c1c1c;
+    }
+    
+    .main-grid {
+        width: 100%;
+    }
+
+    .brand-deck {
+        margin-bottom: 4rem;
+    }
+
+    .grid-box {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.8rem;
+      position: relative;
+    }
+
+    .grid-thumbnail {
+      background: var(--grey-color);
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .grid-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 300ms ease;
+    }
+    
+    .grid-thumbnail:hover img {
+        transform: scale(1.05);
+    }
+
+    /* fullbox */
+    .fullbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .fullbox.active {
+      display: flex;
+    }
+
+    .fullbox-inner {
+      position: relative;  
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+
+    .fullbox-inner img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+
+    .fullbox-close {
+      position: absolute;
+      top: -2rem;
+      right: 0;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      line-height: 1;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="sidebar">
+            <h4 class="page-category">
+                Branding
+            </h4>
+            <ul class="sidebar-menu">
+                <li><a data-target=".brand-deck" class="active">KKday Korea Brand Deck</a></li>
+                <li><a data-target=".welcomekit">Welcome Kit</a></li>
+            </ul>
+            </h3>
+        </nav>
+        <main class="main-grid">
+            <section class="grid-container brand-deck">
+                <ul class="grid-box">
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_1.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_2.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_3.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_4.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_5.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_6.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_7.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_8.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_9.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_10.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_11.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_12.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_13.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_14.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_15.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_16.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_17.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_18.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_19.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_20.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_21.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_22.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_23.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_24.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_25.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_26.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_27.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_28.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_29.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_30.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_31.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_32.png" alt="profile"/>
+                </li>
+                <li class="grid-thumbnail">
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_33.png" alt="profile"/>
+                </li>
+                </ul>
+            </section>
+            <section class="grid-container welcomekit">
+                <div>
+                    <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/welcomekit.jpg" alt="KKday Welcome Kit">
+                </div>
+            </section>
+        </main>
+        <!-- fullbox -->
+        <div class="fullbox" id="fullbox">
+            <div class="fullbox-inner">
+                <button class="fullbox-close" id="fullboxClose">&times;</button>
+                <img src="" alt="" id="fullboxImg">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+const fullbox = document.getElementById('fullbox');
+const fullboxImg = document.getElementById('fullboxImg');
+const fullboxClose = document.getElementById('fullboxClose');
+
+// 썸네일 클릭 시 모달창 열기
+document.querySelectorAll('.grid-thumbnail img').forEach(img => {
+  img.addEventListener('click', () => {
+    fullboxImg.src = img.src;
+    fullbox.classList.add('active');
+  });
+});
+
+fullboxClose.addEventListener('click', () => {
+  fullbox.classList.remove('active');
+});
+
+// 배경 클릭 시 닫힘
+fullbox.addEventListener('click', (e) => {
+  if (e.target === fullbox) {
+    fullbox.classList.remove('active');
+  }
+});
+
+// ESC 키 입력 시 닫힘
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') fullbox.classList.remove('active');
+});
+
+
+// 스크롤 감지 및 사이드바 메뉴 연동 영역
+document.addEventListener("DOMContentLoaded", () => {
+    const menuLinks = document.querySelectorAll('.sidebar-menu a[data-target]');
+    const sections = document.querySelectorAll('.grid-container');
+
+    // 1. 사이드바 메뉴 클릭 시 해당 섹션으로 부드럽게 스크롤 이동
+    menuLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const targetClass = link.getAttribute('data-target');
+            const targetSection = document.querySelector(targetClass);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '-10% 0px -40% 0px', 
+        threshold: 0.1
+    };
+
+    // 3. 스크롤 감지 콜백 함수 (정밀 매칭 방식으로 단 하나만 선언)
+    const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let currentClass = "";
+                if (entry.target.classList.contains('brand-deck')) {
+                    currentClass = ".brand-deck";
+                } else if (entry.target.classList.contains('welcomekit')) {
+                    currentClass = ".welcomekit";
+                }
+                
+                // 현재 활성화된 섹션에 맞는 메뉴에만 active 클래스 토글
+                menuLinks.forEach(link => {
+                    if (link.getAttribute('data-target') === currentClass) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        });
+    };
+
+    // 관찰자(Observer) 초기화 및 섹션 추적 시작
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    sections.forEach(section => observer.observe(section));
+});
+</script>
+</html>
