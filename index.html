@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>[Portfolio] Hyeonjin Oh</title>
+
+  <script src="https://kit.fontawesome.com/b5c8d6b5d7.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/jel2gvk.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  
+
+  <style>
+
+    :root {
+      --display-font : "presicav", sans-serif;
+      --h1-text-style : bold 36px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+      --h2-text-style : 500 24px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+      --h3-text-style : 500 20px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+      --h4-text-style : 400 16px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+      --h5-text-style : 500 20px "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+      --main-font-size: 400 12px "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+      --grey-color: #aaa;
+      --orange-color: #FC5E20;
+    }
+
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: #fff;
+      color: #000;
+      font: var(--main-font-size);
+
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    h1 { 
+      font: bold 36px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif; 
+    }
+    
+    h2 {
+      font: 500 24px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+    }
+    
+    h3 {
+      font: 500 20px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+    } 
+
+    h4 {
+      font: 400 16px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+    }
+      
+    h5 {
+      font: 500 12px "Rethink Sans", "helvetica-neue-lt-pro", Helvetica, Arial, sans-serif;
+    }
+
+
+    [data-target] {
+      cursor: pointer;
+    }
+
+    /* LAYOUT */
+    .wrapper {
+      width: min(1400px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* main */
+    .main-key {
+      height: 100vh;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .key-title {
+      display: flex;
+      font-family: var(--display-font);
+      font-size: clamp(72px, 12vw, 160px);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.6rem;
+    }
+
+    .text-wrapper {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .key-text {
+      color: var(--orange-color);
+    }
+
+    .changing-text {
+      display: inline-block;
+      white-space: nowrap;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: transform 800ms cubic-bezier(0.34, 1.56, 0.64, 1.8),
+            opacity 800ms ease-in-out,
+            color 800ms ease-in-out;
+      }
+
+    .text-yeonjin {
+      color: var(--orange-color); /* 원하는 색상으로 변경 */
+    }
+
+    /* MAIN GRID */
+    .main-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 80px;
+      position: relative;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      position: sticky;
+      top: 40px;
+      height: fit-content;
+    }
+
+    .sidebar-title {
+      margin-bottom: 1.6rem;
+    }
+
+    .sidebar-menu {
+      font: var(--h4-text-style);
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+    }
+
+    .sidebar-submenu {
+      color: var(--grey-color);
+      margin: 0.625rem 0 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625;
+    }
+
+    .lang {
+      color: var(--grey-color);
+    }
+
+    /* CONTENT */
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 180px;
+      padding-bottom: 180px;
+    }
+
+    /* ABOUT */
+    .about {
+      display: flex;
+      gap: 24px;
+    }
+
+    .about-image {
+      width: 100%;
+      max-width: 322px;
+      max-height: 322px;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .personal-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .about-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .desc {
+      width: 100%;
+    }
+
+    .name {
+      font:var(--h1-text-style);
+    }
+
+    .contact {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    .contact i {
+      margin-right: 0.5rem;
+    }
+
+    /* SKILLS */
+    .career-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .career-info-details {
+      width: 100%;
+    }
+
+    .career-title {
+      margin-bottom: 1rem;
+    }
+
+    .expertise ul {
+      list-style-type: disc;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 1rem;
+    }
+
+    .software ul {
+      list-style: disc;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding-left: 1rem;
+    }
+
+    .experience-lists, .education-lists {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .experience-details, .education-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem;
+    }
+
+    .job-desc {
+      font-weight: bold;
+    }
+
+    .period, .location {
+      text-align: right;
+      color: var(--grey-color);
+    }
+
+    /* SECTION */
+    .section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .section-title {
+      font-size: 48px;
+    }
+
+    /* CARD GRID */
+    .card-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .card-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .weekly_flyer {
+      background-color: #85B1F0;
+    }
+
+    .card-title {
+      margin-bottom: 0.5rem;
+    }
+
+    .card-sub {
+      color: var(--grey-color);
+      margin-bottom: 1rem;
+    }
+
+    .card-numbers {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-numbers-item {
+      font-style: italic;
+    }
+
+    .card-result-number {
+      color: var(--orange-color);
+    }
+
+    .card-text {
+      margin-bottom: 1.5rem;
+    }
+
+    .card-tag {
+      color: var(--grey-color);
+    }
+
+    /* TWO GRID */
+    .two-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .wide-image {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .wide-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* HOW I WORK */
+    .workflow {
+      width: 100%;
+      padding-top: 80px;
+    }
+
+    .workflow-head {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+
+    .workflow-title {
+      font-family: var(--display-font);
+      font-size: 11.8vw;
+      white-space: nowrap;
+      letter-spacing: -0.06em;
+      margin-bottom: 18px;
+    }
+
+    .workflow-sub {
+      font-family: var(--display-font);
+      font-size: 3.9vw;
+      letter-spacing: -0.2rem;
+    }
+
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .workflow-card {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .workflow-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 18px;
+    }
+
+    .workflow-label {
+      color: var(--orange-color);
+      margin-bottom: 8px;
+    }
+
+    .workflow-value {
+      font-size: 3rem;
+      font-family: var(--display-font);
+      color: var(--orange-color);
+      line-height: 1;
+    }
+
+    .workflow-time {
+      color: var(--grey-color);
+    }
+
+    .workflow-image {
+      aspect-ratio: 16 / 9;
+    }
+
+    .workflow-text p {
+      margin-bottom: 0.5rem;
+    }
+
+    .outro {
+      text-align: center;
+    }
+
+    .outro-head {
+      color: var(--orange-color);
+    }
+
+    .outro-sub {
+      margin-bottom: 1.5rem;
+    }
+
+    .outro .contact {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+
+      .wrapper {
+        width: min(100% - 32px, 1400px);
+      }
+
+      .main-key {
+        min-height: auto;
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+      .content {
+        gap: 120px;
+      }
+
+      .card-grid,
+      .two-grid,
+      .career-info,
+      .workflow-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 36px;
+      }
+
+      .name {
+        font-size: 36px;
+      }
+
+      .workflow-value {
+        font-size: 54px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <header class="main-key">
+      <h1 class="key-title">
+        <span class="key-text">H</span>
+        <div class="text-wrapper">
+          <span class="changing-text text-ire">ire Me,</span>
+          <span class="changing-text text-yeonjin">yeonjin.</span>
+        </div>
+      </h1>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main-grid">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <h3 class="sidebar-title">
+          Portfolio
+        </h3>
+
+        <nav>
+
+          <ul class="sidebar-menu">
+            <li><a data-target="about">About Me</a></li>
+            <li>
+              <a data-target="promotion-pages">My Graphic Work</a>
+              <ul class="sidebar-submenu">
+                <li><a data-target="promotion-pages">Promotion Pages</a></li>
+                <li><a data-target="branding">Branding</a></li>
+                <li><a data-target="advertising">Advertising</a></li>
+              </ul>
+            </li>
+            <li><a data-target="howiwork">How I Work</a></li>
+            <li><a href="#">Download</a></li>
+            <!--li class="lang">EN / KO</li-->
+          </ul>
+
+        </nav>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="content">
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+
+          <div class="about-image">
+            <img src="https://raw.githubusercontent.com/02145jan/portfolio/45040445d3084deb7cf6df428dee8750c204329b/img/portfolio_profile.jpg" alt="profile"/>
+          </div>
+
+          <div class="about-content">
+
+            <div class="personal-info">
+              <h2 class="name">Hyeonjin Oh</h2>
+              <div class="about-top">
+                <div class="desc">
+                  <p>Graphic / Web Designer with 10 years of experience.<br><br>I have worked mainly on social media advertising, online promotions, and presentation design, focusing on how design can clearly communicate ideas and support business goals.
+                  </p>
+                </div>
+                <ul class="contact">
+                  <li><i class="fas fa-phone-alt"></i><a href="mailto:02145jan@gmail.com" class="mail-address">02145jan@gmail.com</a></li>
+                  <li><i class="fas fa-envelope"></i><a href="tel:+447774707067" class="phone">+44 07774707067</a></li>
+                  <li><i class="fas fa-link"></i><a href="https://www.linkedin.com/in/hyeonjin-oh-a9569018" class="linkedin">LinkedIn</a></li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <div class="career-info">
+
+              <div class="career-info-details expertise">
+                <h3 class="career-title">Expertise</h3>
+                <ul>
+                  <li>E-commerce Design<p>(Promotions / Advertising / Product Pages, etc.)</p></li>
+                  <li>Brand & Campaign Visual Design</li>
+                  <li>Data-informed Design & Optimization</li>
+                </ul>
+
+              </div>
+
+              <div class="career-info-details software">
+                <h3 class="career-title">Software Skills</h3>
+                <ul>
+                  <li>Figma</li>
+                  <li>Adobe Photoshop</li>
+                  <li>Adobe Illustrator</li>
+                  <li>Adobe Premiere Pro</li>
+                  <li>Google Slides / Sheets</li>
+                  <li>Notion</li>
+                </ul>
+
+              </div>
+
+            </div>
+
+            <div class="experience">
+              <h3 class="career-title experience-title">Experience</h3>
+              <ul class="experience-lists">
+                <li class="experience-details">
+                  <div class="job-desc">
+                    Designer + Marketer
+                  </div>
+                  <div class="period">
+                    Jan 2026 -
+                  </div>
+                  <div class="company">
+                    H Mart
+                  </div>
+                  <div class="location">
+                    London, the United Kingdom
+                  </div>
+                </li>
+                <li class="experience-details">
+                  <div class="job-desc">
+                    Graphic + Web Designer / Design Part Leader
+                  </div>
+                  <div class="period">
+                    Jan 2021 - Apr 2025
+                  </div>
+                  <div class="company">
+                    KKday
+                  </div>
+                  <div class="location">
+                    Seoul, South Korea
+                  </div>
+                </li>
+                <li class="experience-details">
+                  <div class="job-desc">
+                    Advertising Graphic Designer
+                  </div>
+                  <div class="period">
+                    May 2019 - Dec 2020
+                  </div>
+                  <div class="company">
+                    EXUS (Design Agency)
+                  </div>
+                  <div class="location">
+                    Seoul, South Korea
+                  </div>
+                </li>
+                <li class="experience-details">
+                  <div class="job-desc">
+                    Advertising Graphic Designer
+                  </div>
+                  <div class="period">
+                    Aug 2018 - Jan 2019
+                  </div>
+                  <div class="company">
+                    BEP
+                  </div>
+                  <div class="location">
+                    Seoul, South Korea
+                  </div>
+                </li>
+                <li class="experience-details">
+                  <div class="job-desc">
+                    Advertising Graphic Designer
+                  </div>
+                  <div class="period">
+                    May 2017 - Jul 2018
+                  </div>
+                  <div class="company">
+                    FineGST
+                  </div>
+                  <div class="location">
+                    Seoul, South Korea
+                  </div>
+                </li>
+                <li class="experience-details">
+                  <div class="job-desc">
+                    Parttime Graphic Designer
+                  </div>
+                  <div class="period">
+                    Dec 2016 - Apr 2017
+                  </div>
+                  <div class="company">
+                    Coupang Market Place
+                  </div>
+                  <div class="location">
+                    Seoul, South Korea
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="education">
+              <h3 class="career-title education-title">Experience</h3>
+              <ul class="education-lists">
+                <li class="education-details">
+                  <div class="job-desc">
+                    Sungshin Women University
+                  </div>
+                  <div class="period">
+                    2008 - 2013
+                  </div>
+                  <div class="company">
+                    Bachelor’s Degree in Industrial Design
+                  </div>
+                  <div class="location">
+                    Seoul, South Korea
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- PROMOTION -->
+        <section class="section" id="promotion-pages">
+
+          <h2 class="section-title">
+            Promotion Pages
+          </h2>
+
+          <div class="card-grid">
+
+            <!-- CARD -->
+            <article class="card">
+              <div class="card-image weekly_flyer">
+                <a href="https://hmartuk.synology.me/assets/promotion/weekly/weekly_flyer.html" target="_blank">
+                  <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/weekly_sale.png" alt="weekly_flyer"/>
+                </a>
+              </div>
+              <div class="card-desc">
+                <h4 class="card-title">
+                  Weekly Sale Flyer
+                </h4>
+
+                <p class="card-sub">
+                  H Mart
+                </p>
+
+                <div class="card-numbers">
+                  <p class="card-numbers-item">Sessions</p>
+                  <p class="card-result-number">25,000</p>
+                </div>
+
+                <p class="card-text">
+                  This page was created to promote the sale products. It was supposed to be released as an image, so even though it took a bunch of resources, a lot of items couldn't be delivered towards customers. To solve this problem, I run the weekly promotion as an web page using spread data base. It saved working time by at least 50%, customers also can check the deals before starting shopping.
+                </p>
+
+                <p class="card-tag">
+                  Figma, HTML / CSS, ChatGPT (Java Script)
+                </p>
+
+                <p class="card-tag">
+                  Feb 2026 - Feb 2026
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-image">
+                <a href="https://www.kkday.com/ko/promo/taiwan-event" target="_blank">
+                  <img src="https://image.kkday.com/v2/image/get/s1.kkday.com/campaign_3778/20240906091317_6WokH/jpg" alt="taiwan-promotion"/>
+                </a>
+              </div>
+              <div class="card-desc">
+                <h4 class="card-title">
+                  [OOH] Taiwan Promotion collaborated with Taiwan Tourism Administration and China Airline
+                </h4>
+
+                <p class="card-sub">
+                  KKday
+                </p>
+
+                <div class="card-numbers">
+                  <p class="card-numbers-item">Sessions</p>
+                  <p class="card-result-number">37,030</p>
+                </div>
+
+                <p class="card-text">
+                  This promotion page was created to encourage travel to Taiwan and was also used for an OOH advertising campaign. The key visual was positively reviewed by the Taiwan head office and the Taiwan Tourism Administration, and was later adopted for the design of an iPASS transportation card.
+                </p>
+
+                <p class="card-tag">
+                  Photoshop, HTML / CSS, Illustrator
+                </p>
+
+                <p class="card-tag">
+                  May 2024 - Aug 2024
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-image">
+                <a href="https://www.kkday.com/ko/promo/shinhan" target="_blank">
+                  <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/shinhancard.jpg" alt="shinhancard"/>
+                </a>
+              </div>
+              <div class="card-desc">
+                <h4 class="card-title">
+                  [Affiliation] Shinhan Card Payback Promotion
+                </h4>
+
+                <p class="card-sub">
+                  KKday
+                </p>
+
+                <div class="card-numbers">
+                  <p class="card-numbers-item">Sessions</p>
+                  <p class="card-result-number">33,950</p>
+                </div>
+
+                <p class="card-text">
+                  This payback promotion was carried out with Shinhan Card which is one of Korean major financial company. I used the associated blue colour to enhance Shinhan Card brand colour. Through this promotion, 30+ users were issued the promotion cards.
+                </p>
+
+                <p class="card-tag">
+                  Photoshop, HTML / CSS
+                </p>
+
+                <p class="card-tag">
+                  Dec 2024 - Jan 2025
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-image">
+                <a href="https://www.kkday.com/ko/promo/kkday10th_preview" target="_blank">
+                  <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/10th.jpg" alt="10th_anniversary"/>
+                </a>
+              </div>
+              <div class="card-desc">
+                <h4 class="card-title">
+                  [Preview] KKday 10th Anniversary
+                </h4>
+
+                <p class="card-sub">
+                  KKday
+                </p>
+
+                <div class="card-numbers">
+                  <p class="card-numbers-item">Sessions</p>
+                  <p class="card-result-number">37,713</p>
+                </div>
+
+                <p class="card-text">
+                  This promotion was designed for upcoming KKday’s 10th Anniversary Big Deal campaign. I used number balloons to clearly highlight the anniversary concept and added CSS animations to make the page more eye-catching and engaging.
+                </p>
+
+                <p class="card-tag">
+                  Photoshop, HTML / CSS
+                </p>
+
+                <p class="card-tag">
+                  Mar 2024 - May 2025
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-image">
+                <a href="https://www.kkday.com/ko/promo/ryokan" target="_blank">
+                  <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/ryokan.jpg" alt="ryokan"/>
+                </a>
+              </div>
+              <div class="card-desc">
+                <h4 class="card-title">
+                  Real Ryokan
+                </h4>
+
+                <p class="card-sub">
+                  KKday
+                </p>
+
+                <div class="card-numbers">
+                  <p class="card-numbers-item">Sessions</p>
+                  <p class="card-result-number">35,800</p>
+                </div>
+
+                <p class="card-text">
+                  This promotion page was created to promote traditional Japanese accommodations, Ryokan. I focused on selecting emotional and atmospheric images that inspire travel, and used serif fonts to enhance the traditional and calm mood.
+                </p>
+
+                <p class="card-tag">
+                  Photoshop, HTML / CSS
+                </p>
+
+                <p class="card-tag">
+                  Dec 2024 - Jan 2025
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-image">
+                <a href="https://www.kkday.com/ko/promo/thaivietnam" target="_blank">
+                  <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/thai_vietnam.jpg" alt="thai_vietnam"/>
+                </a>
+              </div>
+              <div class="card-desc">
+                <h4 class="card-title">
+                  Thai & Vietnam Slow Festival
+                </h4>
+
+                <p class="card-sub">
+                  KKday
+                </p>
+
+                <div class="card-numbers">
+                  <p class="card-numbers-item">Sessions</p>
+                  <p class="card-result-number">13,540</p>
+                </div>
+
+                <p class="card-text">
+                  This promotion page was created with a festival concept, targeting Korean Gen Z users. Cute character illustrations were used to match the theme and appeal to the target audience.
+                </p>
+
+                <p class="card-tag">
+                  Photoshop, HTML / CSS
+                </p>
+
+                <p class="card-tag">
+                  June 2024 - Sep 2024
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- BRANDING -->
+        <section class="section" id="branding">
+
+          <h2 class="section-title">
+            Branding
+          </h2>
+
+          <div class="two-grid">
+
+            <article class="card">
+
+              <div class="wide-image">
+                <a href="">
+                  <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/PoppinLens_Proposal_1.webp" alt="Popin Lens">
+                </a>
+              </div>
+
+              <div>
+                <h4 class="card-title">
+                  BI, Business Proposal
+                </h4>
+
+                <p class="card-sub">
+                  Popin Lens
+                </p>
+
+                <p class="card-text">
+                  This is the business proposal in order to bid locating Popin Lens's product in Daiso that is one of huge Korean life-style shops. I focused on enhancing their poppin mood to reveal their brand 정체성 mainly using pink and black colour. 
+                </p>
+
+                <p class="card-tag">
+                  Illustration, Photoshop, Google Presentation
+                </p>
+
+                <p class="card-tag">
+                  Jan 2021 - Apr 2025
+                </p>
+            </article>
+
+            <article class="card">
+
+              <div class="wide-image">
+                <a href="#">
+                  <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/KKday_Branddeck_1.png" alt="KKday Brand Deck">
+                </a>
+              </div>
+
+              <div>
+                <h4 class="card-title">
+                  Brand Deck + Welcome Kit
+                </h4>
+
+                <p class="card-sub">
+                  KKday
+                </p>
+
+                <p class="card-text">
+                  This is KKday's Brand Deck in order to suggest cooperating. I mainly focused on design with the Mint Colour that KKday's CI coulour to 각인시키다 the colour impact to the readers. The PR team was able to communicate with 협력업체 more smoothly via this brand deck. 
+                </p>
+
+                <p class="card-tag">
+                  Illustration, Photoshop, Google Presentation
+                </p>
+
+                <p class="card-tag">
+                  Jan 2021 - Apr 2025
+                </p>
+            </article>
+          </div>
+
+        </section>
+
+        <!-- ADVERTISING -->
+        <section class="section" id="advertising">
+
+          <h2 class="section-title">
+            Advertising
+          </h2>
+
+          <div class="two-grid">
+
+            <article class="card">
+
+              <div class="wide-image">
+                <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/posters_thumbnail.jpg" alt="Posters in H Mart">
+              </div>
+
+              <div>
+
+                <h4 class="card-title">
+                  Posters
+                </h4>
+
+                <p class="card-sub">
+                  H Mart
+                </p>
+
+                <div class="card-numbers">
+                  <p class="card-numbers-item"></p>
+                  <p class="card-result-number"></p>
+                </div>
+
+                <p class="card-text">
+                  The posters were created to promote sale products. They were displaied not only in the store, also posted on social media such as Instagram, Rednote. Especially by placing the posters for short date products, the customers could be aware the deals, and H Mart also could speed up the 소진율 of the products by around 9%. 
+                </p>
+
+                <p class="card-tag">
+                  Figma, Photoshop, Illustration
+                </p>
+
+                <p class="card-tag">
+                  Feb 2026 - Jun 2026
+                </p>
+
+              </div>
+
+            </article>
+              
+            <article class="card">
+
+              <div class="wide-image">
+                <a href="https://www.instagram.com/p/DXwF_2XjIoB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+                  <img src="https://raw.githubusercontent.com/02145jan/portfolio/refs/heads/main/img/GreenHat.webp" alt="GreenHat">
+                </a>
+              </div>
+
+              <div>
+
+                <h4 class="card-title">
+                  [Instagram] GreenHat Sorbet
+                </h4>
+
+                <p class="card-sub">
+                  KKday / Oseyo
+                </p>
+
+                <div class="card-numbers">
+                  <p class="card-numbers-item">Likes</p>
+                  <p class="card-result-number">1,240</p>
+                </div>
+
+                <p class="card-text">
+                  This advertising image was designed to promote H Mart & Oseyo's PB products. Since the ice cream shape is realitic and cute, I concentrated to designing the artificial and 몽환적인 mood. There wasn't any mock-up images before lauching, so I created the product mock-up images as well.
+                </p>
+
+                <p class="card-tag">
+                  Figma, Photoshop, ChatGPT
+                </p>
+
+                <p class="card-tag">
+                  Jan 2021 - Apr 2025
+                </p>
+
+              </div>
+
+            </article>
+
+            <article class="card">
+
+              <div class="wide-image"></div>
+
+              <div>
+
+                <h4 class="card-title">
+                  [OOH] Taiwan Promotion collaborated with Taiwan Tourism Administration and China Airline
+                </h4>
+
+                <p class="card-sub">
+                  KKday
+                </p>
+
+                <div class="card-numbers">
+                  <p class="card-numbers-item">Likes</p>
+                  <p class="card-result-number">350</p>
+                </div>
+
+                <p class="card-text">
+                  As you could already checked, this promotion was also conducted as OOH. I matched the key visual image to enhance the 
+                </p>
+
+                <p class="card-tag">
+                  Photoshop, Illustration
+                </p>
+
+                <p class="card-tag">
+                  May 2024 - Aug 2024
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- HOW I WORK -->
+        <section class="workflow" id="howiwork">
+
+          <div class="workflow-head">
+
+            <h2 class="workflow-title">
+              How I work
+            </h2>
+
+            <p class="workflow-sub">
+              Designing with Business in Mind
+            </p>
+
+          </div>
+
+          <div class="workflow-grid">
+            <article class="workflow-card">
+
+              <div class="workflow-top">
+
+                <div>
+                  <h4 class="workflow-label">
+                    데이터 베이스 구축을 통한 업무 프로세스 간결화
+                  </h4>
+
+                  <h3 class="workflow-value">
+                    50%+
+                  </h3>
+                </div>
+
+                <p class="workflow-time">
+                  12 Hours → 4 Hours
+                </p>
+
+              </div>
+
+              <div class="workflow-image"></div>
+              <div class="workflow-text">
+                
+                <p>
+                  <span class="key-text">Discover</span>
+                  Discovered a bunch of resources to finish weekly sale flyer. Making one image takes not only a lot of time, but also data. Because of the issue, the all sale products were not able to be listed.
+              </p>
+              <p>
+                <span class="key-text">Tasks</span>
+                Key Visual Design, AI를 통해 세일 데이터를 페이지로 노출, Product Mock-up Image Creating, 
+              </p>
+              <p>
+                <span class="key-text">Deliver</span>
+                이미 전달된 이미지는 수정이 불가하였는데 세일 정보가 업데이트 되어도 
+              </p>
+              </div>
+
+            </article>
+            <article class="workflow-card">
+
+              <div class="workflow-top">
+
+                <div>
+                  <h4 class="workflow-label">
+                    데이터 베이스 구축을 통한 업무 프로세스 간결화
+                  </h4>
+
+                  <h3 class="workflow-value">
+                    20%+
+                  </h3>
+                </div>
+
+                <p class="workflow-time">
+                  12 Hours → 4 Hours
+                </p>
+
+              </div>
+
+              <div class="workflow-image"></div>
+              <div class="workflow-text">
+                <p>
+                  <span class="key-text">Discover</span>
+                  Discovered the ineffective feature of the existed promo page back-end system, such as not supporting to insert youtube video, 캐러셀 기능 that is able to contain more information.
+              </p>
+              <p>
+                <span class="key-text">Define</span>
+                Wrote codes for each promotion page, and saveed on my codepen account to reuse them anytime.
+              </p>
+              <p>
+                <span class="key-text">Develop</span>
+                Created one page that all the codes I wrote are on, so that I can work on take them anytime. Additionally, I wrote the instroduction so even anyone who doesn't know HTML / CSS can modify the pages.
+              </p>
+              <p>
+                <span class="key-text">Deliver</span>
+                Shared this page all the designers in other branches, so they can also make more effective and efficient promotion page. IT team also could check which funtion and feature the marketers and designers require through this page. It was used to check for the IT team to develop the promotion back-end system.
+              </p>
+              </div>
+
+            </article>
+
+            <article class="workflow-card">
+
+              <div class="workflow-top">
+
+                <div>
+                  <h4 class="workflow-label">
+                    Product Page Optimization
+                  </h4>
+
+                  <h3 class="workflow-value">
+                    4.82%+
+                  </h3>
+                </div>
+
+                <p class="workflow-time">
+                  Average CVR
+                </p>
+
+              </div>
+
+              <div class="workflow-image"></div>
+              <div class="workflow-text">
+              <p>
+                <span class="key-text">Tasks</span>
+                경쟁사 페이지 분석, 페이지 플로우 구성, 이미지 수급, 디자인, 운영 지원, 데이터 트래킹
+              </p>
+              <p>
+                <span class="key-text">Tasks</span>
+                경정보 불일치, 정보 부족 등 고객이 상품을 이해하는 과정에서 겪을 수 있는 문제점을 발견 및 분석하여 상품 페이지 최적화 작업을 진행했습니다. 경쟁사 페이지를 분석하여 부족한 정보가 무엇인지 파악하고 페이지 플로우를 효율적으로 구성하여 타부서와의 협업을 통해 이미지를 수급하였습니다. 고객이 정보를 한눈에 알아보기 쉽게끔 새로 구성하여 디자인을 하였고 담당자와의 긴밀한 커뮤니케이션을 통해 이를 실질적으로 적용하였습니다. 이후에는 최종적으로 데이터 트래킹을 통해 방향성을 점검하였습니다.
+              </p>
+              </div>
+
+            </article>
+
+            <article class="workflow-card">
+
+              <div class="workflow-top">
+
+                <div>
+                  <p class="workflow-label">
+                    Ambassador of KKday's Core Value
+                  </p>
+
+                  <h3 class="workflow-value">
+                    Customer First
+                  </h3>
+                </div>
+
+                <p class="workflow-time">
+                  2024
+                </p>
+
+              </div>
+
+              <div class="workflow-image"></div>
+              <div class="workflow-text">
+              <p>
+                <span class="key-text">Value</span>
+                I had evaluated a designer who always tries to understand users' needs. I always desired to know what users exactly want about our service except good price and how our users see our service. 
+              </p>
+              </div>
+
+            </article>
+          </div>
+
+        </section>
+
+        <!--Thank you-->
+        <section class="outro">
+          <h2 class="outro-head">
+            Thank you
+          </h2>
+          <h4 class="outro-sub">
+            Let’s make a sturnning work together
+          </h4>
+          <ul class="contact">
+            <li><i class="fas fa-phone-alt"></i><a href="mailto:02145jan@gmail.com" class="mail-address">02145jan@gmail.com</a></li>              
+            <li><i class="fas fa-envelope"></i><a href="tel:+447774707067" class="phone">+44 07774707067</a></li>
+          </ul>
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+
+<script>
+  document.fonts.ready.then(() => {
+  const ire = document.querySelector('.text-ire');
+  const yeonjin = document.querySelector('.text-yeonjin');
+  const wrapper = document.querySelector('.text-wrapper');
+
+  const REM = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const OFFSET = 1.5;
+  const DURATION = 800;
+  const DELAY = 1000;
+
+  wrapper.style.height = `${ire.getBoundingClientRect().height / REM * 1.1}rem`;
+  wrapper.style.width = `${Math.max(
+    ire.getBoundingClientRect().width,
+    yeonjin.getBoundingClientRect().width
+  ) / REM}rem`;
+
+  ire.style.transform = 'translateY(0)';
+  ire.style.opacity = '1';
+  yeonjin.style.transform = `translateY(${OFFSET * 4}rem)`;
+  yeonjin.style.opacity = '0';
+
+  function toggle() {
+    ire.style.transform = `translateY(-${OFFSET * 4}rem)`;
+    ire.style.opacity = '0';
+    ire.style.color = 'var(--orange-color)';
+    yeonjin.style.transform = 'translateY(0)';
+    yeonjin.style.opacity = '1';
+
+    setTimeout(() => {
+      ire.style.color = '#000';
+      ire.style.transform = 'translateY(0)';
+      ire.style.opacity = '1';
+      yeonjin.style.transform = `translateY(${OFFSET * 4}rem)`;
+      yeonjin.style.opacity = '0';
+    }, DELAY + DURATION);
+  }
+
+  setTimeout(toggle, DELAY);
+  setInterval(toggle, (DELAY + DURATION) * 2);
+});
+
+document.querySelectorAll('[data-target]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.getElementById(link.dataset.target);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+</script>
+</html>
